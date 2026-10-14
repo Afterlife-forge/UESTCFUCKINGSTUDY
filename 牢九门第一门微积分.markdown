@@ -1,141 +1,3 @@
-# 牢九门第一门微积分
-
-> 整理：ka2e
-> 校正：
-> 本资料旨在帮助泥点学弟学妹复习，禁止随意修改，发现错误请上报
-
-# 第一章 函数 极限与连续
-
-## §1.1 映射与函数
-
-### 一、集合与区间
-
-**区间**
-- 开区间：$(a,b)=\{x\mid a<x<b\}$
-- 闭区间：$[a,b]=\{x\mid a\le x\le b\}$
-- 半开半闭：$[a,b)$、$(a,b]$
-
-**邻域**
-设 $x_0\in\mathbb{R}$，$\delta>0$：
-- 点 $x_0$ 的 $\delta$ 邻域：$U(x_0,\delta)=(x_0-\delta,\ x_0+\delta)$
-- **去心邻域**：$U^\circ(x_0,\delta)=\{x\mid 0<|x-x_0|<\delta\}$
-
-> 去心邻域后面求极限天天用，因为 $x\to x_0$ 时 $x\ne x_0$。
-
----
-
-### 二、映射
-
-**定义**
-设 $X,Y$ 为非空集合。若存在对应法则 $f$，使对每个 $x\in X$，都有**唯一**的 $y\in Y$ 与之对应，则称 $f$ 为从 $X$ 到 $Y$ 的映射，记
-$$f:X\to Y,\qquad y=f(x)$$
-
-**几个概念**
-- **定义域**：$D_f=X$
-- **值域**：$R_f=\{f(x)\mid x\in X\}\subseteq Y$
-- **满射**：$R_f=Y$
-- **单射**：$x_1\ne x_2\Rightarrow f(x_1)\ne f(x_2)$
-- **一一映射（双射）**：既是单射又是满射
-
-> 映射是函数概念的推广；函数就是定义域和值域都是实数集的映射。
-
----
-
-### 三、函数
-
-**定义**
-设数集 $D\subseteq\mathbb{R}$。若存在对应法则 $f$，使对每个 $x\in D$，都有唯一的 $y\in\mathbb{R}$ 与之对应，则称 $f$ 为定义在 $D$ 上的函数，记
-$$y=f(x),\quad x\in D$$
-
-**函数两要素**
-1. **定义域** $D$
-2. **对应法则** $f$
-
-> 判断两个函数是否相同，就看这两要素是否一致，与用什么字母无关。
-
-**函数的表示法**
-- 公式法（解析法）
-- 表格法
-- 图像法
-
----
-
-### 四、函数的几种特性
-
-**1. 有界性**
-设 $f$ 定义在 $D$ 上。若 $\exists M>0$，使 $\forall x\in D$，有 $|f(x)|\le M$，则称 $f$ 在 $D$ 上有界；否则无界。
-
-**2. 单调性**
-设 $f$ 定义在 $D$ 上，区间 $I\subseteq D$：
-- 若 $\forall x_1,x_2\in I,\ x_1<x_2$，有 $f(x_1)<f(x_2)$，则 $f$ 在 $I$ 上**单调递增**
-- 若 $f(x_1)>f(x_2)$，则**单调递减**
-
-**3. 奇偶性**
-设 $D$ 关于原点对称：
-- **偶函数**：$f(-x)=f(x)$，图像关于 $y$ 轴对称
-- **奇函数**：$f(-x)=-f(x)$，图像关于原点对称
-
-**4. 周期性**
-若 $\exists T>0$，使 $\forall x\in D$，$x+T\in D$ 且 $f(x+T)=f(x)$，则称 $f$ 为周期函数，$T$ 为周期。
-
-> 通常说的周期指**最小正周期**（不一定存在）。
-
----
-
-### 五、反函数与复合函数
-
-**反函数**
-设 $f:D\to R_f$ 是一一映射，则可定义其反函数
-$$f^{-1}:R_f\to D,\qquad f^{-1}(y)=x\iff f(x)=y$$
-- 性质：$f^{-1}(f(x))=x$，$f(f^{-1}(y))=y$
-- 图像：$y=f(x)$ 与 $y=f^{-1}(x)$ 关于直线 $y=x$ 对称
-
-**复合函数**
-设 $y=f(u)$，$u=g(x)$，且 $g$ 的值域含于 $f$ 的定义域，则
-$$y=f(g(x))$$
-称为由 $f$ 与 $g$ 复合而成的复合函数，$u$ 为中间变量。
-
-> 复合条件：**内函数值域 ⊆ 外函数定义域**。
-
----
-
-### 六、基本初等函数与初等函数
-
-**基本初等函数（6类）**
-1. 幂函数：$y=x^\mu$
-2. 指数函数：$y=a^x\ (a>0,a\ne 1)$
-3. 对数函数：$y=\log_a x\ (a>0,a\ne 1)$
-4. 三角函数：$\sin x,\cos x,\tan x,\cot x,\sec x,\csc x$
-5. 反三角函数：$\arcsin x,\arccos x,\arctan x,\operatorname{arccot} x$
-6. 常数函数：$y=C$
-
-**初等函数**
-由基本初等函数经过**有限次**四则运算和复合，且能用一个式子表示的函数。
-
-> 初等函数在其定义区间内连续——这是后面求极限可以直接代入的依据。
-
----
-
-### 对应题目
-
-| 题号 | 类型 | 备注 |
-|------|------|------|
-| 课本 P__ 例__ | 求定义域 | 待填 |
-| 课本 P__ 例__ | 判断奇偶性 | 待填 |
-| 课本 P__ 习题1.1 第__题 | 复合函数分解 | 待填 |
-| 真题 ____ 第__题 | 待补充 | 待补充 |
-
----
-
-### 本节易错点
-
-- 去心邻域 $U^\circ$ 和普通邻域 $U$ 的区别：去心邻域**不含** $x_0$
-- 判断两函数相同：只看定义域和对应法则，**与自变量字母无关**
-- 奇偶性前提：定义域必须关于原点对称，否则非奇非偶
-- 复合函数存在条件：内函数值域 ⊆ 外函数定义域
-
----
-
 ## §1.2 极限的概念
 
 > 本节是第一章的核心，极限是整个微积分的基础。
@@ -204,9 +66,7 @@ $$\lim_{n\to\infty}x_n=A \quad \text{或} \quad x_n\to A\ (n\to\infty)$$
 4. 当 $n>N$ 时倒推验证
 
 <details>
-<summary>真题</summary>
-
-**例：证明 $\displaystyle\lim_{n\to\infty}\frac{1}{n}=0$**
+<summary>例：证明 $\displaystyle\lim_{n\to\infty}\frac{1}{n}=0$</summary>
 
 任取 $\varepsilon>0$，要使
 
@@ -217,6 +77,13 @@ $$\left|\frac{1}{n}-0\right|=\frac{1}{n}<\varepsilon$$
 取 $N=\left\lceil\frac{1}{\varepsilon}\right\rceil$，则当 $n>N$ 时，有 $\frac{1}{n}<\varepsilon$，即 $\left|\frac{1}{n}-0\right|<\varepsilon$。
 
 所以 $\displaystyle\lim_{n\to\infty}\frac{1}{n}=0$。∎
+
+</details>
+
+<details>
+<summary>真题</summary>
+
+（待补充）
 
 </details>
 
@@ -276,9 +143,7 @@ $$\lim_{x\to x_0}f(x)\ \text{存在} \iff \lim_{x\to x_0^-}f(x)=\lim_{x\to x_0^+
 **用途**：分段函数在分界点必须分左右讨论。
 
 <details>
-<summary>真题</summary>
-
-**例：设 $f(x)=\begin{cases}x+1,&x<0\\x^2,&x\ge 0\end{cases}$，判断 $\displaystyle\lim_{x\to 0}f(x)$ 是否存在**
+<summary>例：设 $f(x)=\begin{cases}x+1,&x<0\\x^2,&x\ge 0\end{cases}$，判断 $\displaystyle\lim_{x\to 0}f(x)$ 是否存在</summary>
 
 **解**：
 
@@ -289,6 +154,13 @@ $$\lim_{x\to 0^-}f(x)=\lim_{x\to 0^-}(x+1)=1$$
 $$\lim_{x\to 0^+}f(x)=\lim_{x\to 0^+}x^2=0$$
 
 左极限 $\ne$ 右极限，所以 $\displaystyle\lim_{x\to 0}f(x)$ 不存在。
+
+</details>
+
+<details>
+<summary>真题</summary>
+
+（待补充）
 
 </details>
 
@@ -305,9 +177,7 @@ $$\lim_{x\to x_0}f(x)=A \iff \text{对任意 } x_n\to x_0\ (x_n\ne x_0)，\text{
 只要找到两个不同的数列，它们都趋于 $x_0$，但对应的函数值趋于不同的值（或有一个不收敛），就能断定函数极限不存在。
 
 <details>
-<summary>真题</summary>
-
-**证明 $\displaystyle\lim_{x\to 0}\sin\frac{1}{x}$ 不存在**
+<summary>例：证明 $\displaystyle\lim_{x\to 0}\sin\frac{1}{x}$ 不存在</summary>
 
 取 $x_n=\frac{1}{2n\pi}$，则 $x_n\to 0$，且
 
@@ -321,6 +191,13 @@ $$\sin\frac{1}{y_n}=\sin\left(2n\pi+\frac{\pi}{2}\right)=1\to 1$$
 
 </details>
 
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
 ---
 
 ### 四、易混点
@@ -331,3 +208,225 @@ $$\sin\frac{1}{y_n}=\sin\left(2n\pi+\frac{\pi}{2}\right)=1\to 1$$
 | ε-N vs ε-δ | 数列用 $N$（整数），函数用 $\delta$（正数） |
 | 左极限 vs 右极限 | 分段函数分界点必须两边都看 |
 | 极限不存在的情况 | 左右极限不等、趋于无穷、振荡 |
+
+---
+
+## §1.3 无穷小量与无穷大量
+
+> 本节研究以 0 为极限的变量和绝对值无限增大的变量。
+
+---
+
+### 一、无穷小量与无穷大量的概念
+
+#### 1. 无穷小量
+
+**定义**
+设函数 $f(x)$ 在点 $x_0$ 的某个去心邻域内有定义（或在 $|x|$ 充分大时有定义）。若
+$$\lim_{x\to x_0}f(x)=0$$
+（或 $\displaystyle\lim_{x\to\infty}f(x)=0$），则称函数 $f(x)$ 为当 $x\to x_0$（或 $x\to\infty$）时的**无穷小量**。
+
+**用 ε-δ 语言表述**：
+若对任意 $\varepsilon>0$，存在 $\delta>0$，使得当 $0<|x-x_0|<\delta$ 时，都有
+$$|f(x)|<\varepsilon$$
+则称 $f(x)$ 是当 $x\to x_0$ 时的无穷小量。
+
+**无穷小数列**：
+若数列 $\{x_n\}$ 满足 $\displaystyle\lim_{n\to\infty}x_n=0$，则称 $\{x_n\}$ 为**无穷小数列**。
+
+**关键理解**：
+- 无穷小量是一个**变量**，不是“很小的数”
+- 说“某函数是无穷小”，必须**指明趋近过程**
+
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
+#### 2. 无穷大量
+
+**定义**
+设函数 $f(x)$ 在点 $x_0$ 的某个去心邻域内有定义（或在 $|x|$ 充分大时有定义）。若对任意 $M>0$，存在 $\delta>0$，使得当 $0<|x-x_0|<\delta$ 时，都有
+$$|f(x)|>M$$
+则称 $f(x)$ 为当 $x\to x_0$（或 $x\to\infty$）时的**无穷大量**。
+
+**关键理解**：
+- 无穷大量也是**变量**，不是“很大的数”
+- 无穷大量**一定无界**，但**无界不一定是无穷大**
+- 必须指明自变量趋近过程
+
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
+---
+
+### 二、无穷小量与无穷大量的关系
+
+**定理（倒数关系）**
+在自变量的同一变化趋势下：
+- 无穷大量的倒数为无穷小量
+- 非零无穷小量的倒数为无穷大量
+
+**证明**（以 $x\to x_0$，$f(x)$ 为无穷大为例）：
+
+设 $\displaystyle\lim_{x\to x_0}f(x)=\infty$。任取 $\varepsilon>0$，令 $M=\frac{1}{\varepsilon}$。
+
+由 $\displaystyle\lim_{x\to x_0}f(x)=\infty$，$\exists\delta>0$，当 $0<|x-x_0|<\delta$ 时，有 $|f(x)|>M=\frac{1}{\varepsilon}$。
+
+于是 $\left|\frac{1}{f(x)}\right|<\varepsilon$，所以 $\displaystyle\lim_{x\to x_0}\frac{1}{f(x)}=0$。
+
+同理可证：若 $\displaystyle\lim_{x\to x_0}f(x)=0$，$f(x)\ne 0$，则 $\displaystyle\lim_{x\to x_0}\frac{1}{f(x)}=\infty$。∎
+
+**例子**：
+$$\lim_{x\to 1}(x-1)^2=0 \Rightarrow \lim_{x\to 1}\frac{1}{(x-1)^2}=\infty$$
+
+> 由于当 $f(x)\ne 0$ 时，无穷小和无穷大（在自变量的同一变化趋向下）互为倒数关系，因此**关于无穷大的研究可以利用无穷小来进行**。
+
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
+---
+
+### 三、无穷小的运算性质
+
+#### 1. 两个无穷小的和仍为无穷小
+
+**定理 2**
+若 $\displaystyle\lim_{x\to x_0}\alpha(x)=0$，$\displaystyle\lim_{x\to x_0}\beta(x)=0$，则
+$$\lim_{x\to x_0}[\alpha(x)\pm\beta(x)]=0$$
+
+**证明**：
+
+由 $\displaystyle\lim_{x\to x_0}\alpha(x)=0$ 知，$\forall\varepsilon>0$，$\exists\delta_1>0$，当 $0<|x-x_0|<\delta_1$ 时，有
+$$|\alpha(x)|<\frac{\varepsilon}{2}$$
+
+又由 $\displaystyle\lim_{x\to x_0}\beta(x)=0$，对上述 $\varepsilon>0$，$\exists\delta_2>0$，当 $0<|x-x_0|<\delta_2$ 时，有
+$$|\beta(x)|<\frac{\varepsilon}{2}$$
+
+取 $\delta=\min\{\delta_1,\delta_2\}$，则当 $0<|x-x_0|<\delta$ 时，
+$$|\alpha(x)\pm\beta(x)|\le|\alpha(x)|+|\beta(x)|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$$
+
+故 $\displaystyle\lim_{x\to x_0}[\alpha(x)\pm\beta(x)]=0$。∎
+
+> **说明**：两个无穷小之和（或差）仍为无穷小。这一结论可以**推广到有限个无穷小**的情形。上述结论在 $x\to\infty$ 时仍然成立。
+
+**推论 1**
+设 $\displaystyle\lim_{x\to x_0}\alpha_i(x)=0$，$C_i$ 为常数（$i=1,2,\dots,n$），则
+$$\lim_{x\to x_0}\sum_{i=1}^n C_i\alpha_i(x)=0$$
+
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
+#### 2. 有界函数与无穷小的乘积仍为无穷小
+
+**定理 3**
+若 $\displaystyle\lim_{x\to x_0}\alpha(x)=0$，且 $f(x)$ 在 $x_0$ 的某去心邻域内有界，则
+$$\lim_{x\to x_0}\alpha(x)f(x)=0$$
+
+**证明**：
+
+由 $f(x)$ 在 $x_0$ 的某去心邻域内有界，知 $\exists M>0$，$\exists\delta_1>0$，当 $0<|x-x_0|<\delta_1$ 时，
+$$|f(x)|\le M$$
+
+又由 $\displaystyle\lim_{x\to x_0}\alpha(x)=0$ 知，$\forall\varepsilon>0$，$\exists\delta_2>0$，当 $0<|x-x_0|<\delta_2$ 时，有
+$$|\alpha(x)|<\frac{\varepsilon}{M}$$
+
+取 $\delta=\min\{\delta_1,\delta_2\}$，则当 $0<|x-x_0|<\delta$ 时，
+$$|\alpha(x)f(x)|=|\alpha(x)|\cdot|f(x)|<\frac{\varepsilon}{M}\cdot M=\varepsilon$$
+
+所以 $\displaystyle\lim_{x\to x_0}\alpha(x)f(x)=0$。∎
+
+> **说明**：这个定理说明**无穷小与有界变量之积为无穷小**。
+
+<details>
+<summary>例 1：求 $\displaystyle\lim_{x\to\infty}\frac{1}{x(1+e^x)}$</summary>
+
+**解**：因为 $\displaystyle\lim_{x\to\infty}\frac{1}{x}=0$，又 $\left|\frac{1}{1+e^x}\right|\le 1$，所以由定理 3 知
+$$\lim_{x\to\infty}\frac{1}{x(1+e^x)}=0$$
+
+</details>
+
+<details>
+<summary>例 2：求 $\displaystyle\lim_{x\to 0}x^2\arctan\frac{1}{x}$</summary>
+
+**解**：因为 $\displaystyle\lim_{x\to 0}x^2=0$，又 $\left|\arctan\frac{1}{x}\right|\le\frac{\pi}{2}$，所以由定理 3 知
+$$\lim_{x\to 0}x^2\arctan\frac{1}{x}=0$$
+
+</details>
+
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
+#### 3. 有限个无穷小的乘积仍为无穷小
+
+**推论 2**
+设 $\displaystyle\lim_{x\to x_0}\alpha_i(x)=0$（$i=1,2,\dots,n$），则
+$$\lim_{x\to x_0}\prod_{i=1}^n\alpha_i(x)=0$$
+
+> **符号说明**：$\displaystyle\prod_{i=1}^n\alpha_i(x)$ 表示 $\alpha_1(x)\alpha_2(x)\cdots\alpha_n(x)$ 之积。
+> **即**：有限个无穷小之积也是无穷小。
+> **注意**：无限个无穷小之积不一定是无穷小。
+
+**注**：
+- 如果自变量变化趋势不同时，则无穷小不能进行四则运算
+- $\frac{0}{0}$ 型极限**不一定**为无穷小
+- 两个无穷小的**商**不确定，可能是 $0$、常数、$\infty$ 或不存在
+
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
+---
+
+### 四、函数及其极限与无穷小的关系
+
+**定理 4（充要条件）**
+$$\lim_{x\to x_0}f(x)=A \iff f(x)=A+\alpha(x)，其中 \lim_{x\to x_0}\alpha(x)=0$$
+
+**证明**：
+
+**必要性**：若 $\displaystyle\lim_{x\to x_0}f(x)=A$，则 $\forall\varepsilon>0$，$\exists\delta>0$，当 $0<|x-x_0|<\delta$ 时，有 $|f(x)-A|<\varepsilon$。
+记 $\alpha(x)=f(x)-A$，因此 $|\alpha(x)|<\varepsilon$，即 $\displaystyle\lim_{x\to x_0}\alpha(x)=0$。
+
+**充分性**：设 $f(x)=A+\alpha(x)$，其中 $\displaystyle\lim_{x\to x_0}\alpha(x)=0$，则 $\forall\varepsilon>0$，$\exists\delta>0$，当 $0<|x-x_0|<\delta$ 时，有 $|\alpha(x)|<\varepsilon$，且 $|\alpha(x)|=|f(x)-A|$，即 $|f(x)-A|<\varepsilon$，所以 $\displaystyle\lim_{x\to x_0}f(x)=A$。∎
+
+> **说明**：定理 4 说明函数的极限等于常数与无穷小之和。
+
+**注**：极限为无穷大是一种特殊无界量，但是无界量**未必**是无穷大。
+
+**以 $f(x)=x\sin x$ 为例**：
+
+- 取 $x_n=2n\pi+\frac{\pi}{2}$，则 $f(x_n)=2n\pi+\frac{\pi}{2}\to+\infty$，故 $f(x)$ 无界
+- 取 $y_n=n\pi$，则 $f(y_n)=0$，不趋于无穷大，故 $f(x)$ 不是无穷大
+
+> **结论**：无穷大量 **一定是无界量**；无界量 **不一定是无穷大量**。
+
+<details>
+<summary>真题</summary>
+
+（待补充）
+
+</details>
+
+---
